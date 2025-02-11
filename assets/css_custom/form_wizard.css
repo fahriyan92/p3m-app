@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+#regForm {
+  background-color: #8bb8d8;
+  margin: 10px auto;
+
+  padding: 5px;
+  width: 60%;
+  min-width: 300px;
+}
+
+h5 {
+  text-align: center;
+}
+h6 {
+  text-align: center;
+}
+
+text-center {
+  text-align: center;
+}
+
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+w-50 {
+  width: 50%;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #072f70;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #8bb8d8;
+  color: #1e3252;
+  border: none;
+  padding: 10px 20px;
+
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #8bb8d8;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  background-color: #5094cb;
+  border: none;
+
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  background-color: #1e3252;
+
+  opacity: 1;
+}
+
+.step.active a {
+  color: #8bb8d8;
+}
+
+.step a {
+  color: #000;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #1e3252 !important;
+  color: #8bb8d8;
+}
+
+.not-allowed {
+  cursor: not-allowed !important;
+}

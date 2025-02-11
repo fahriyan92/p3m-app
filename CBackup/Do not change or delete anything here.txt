@@ -1,0 +1,5 @@
+Please do not change or delete this directory or these backup files.
+We can not know what changes you have made to the backup files in the path.
+This may cause not recognize the backup file correctly, or other errors.
+Therefore, please use CBackup to manage backup versions and files.
+More information can be found at https://www.cbackup.com/support.html
