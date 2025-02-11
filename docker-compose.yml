@@ -1,0 +1,43 @@
+version: '3.3'
+
+services:
+  msyql_db:
+    image: mysql:5.7
+    restart: unless-stopped
+    command: [--explicit_defaults_for_timestamp]
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=p3m_polije
+    ports:
+      - 3306:3306
+    volumes:
+      - msyqldata-p3m:/var/lib/mysql
+    # user: "999:999"
+
+  php-env: 
+    depends_on:
+      - msyql_db
+    restart: unless-stopped
+    build: .
+    volumes:
+      - ./:/var/www/html
+      - vendor-p3m:/var/www/html/vendor
+    environment:
+      - APACHE_RUN_USER=#1000
+      - APACHE_RUN_GROUP=#1000
+    ports: 
+      - '9000:80'
+    links:
+      - msyql_db
+  
+  # adminer:
+  #   image: adminer:latest
+  #   environment: 
+  #     - ADMINER_DEFAULT_SERVER=msyql_db
+  #   restart: always
+  #   ports:
+  #     - 9001:8080
+
+volumes:
+  msyqldata-p3m:
+  vendor-p3m:

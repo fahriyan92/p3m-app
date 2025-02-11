@@ -1,0 +1,10 @@
+#loading {
+  padding: 43%;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -webkit-transform-origin: 50% calc(50% - 0.5px);
+  transform-origin: 50% calc(50% - 0.5px);
+  pointer-events: none;
+  cursor: default;
+}
